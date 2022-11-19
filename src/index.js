@@ -1,32 +1,31 @@
-import _ from 'lodash';
 import './style.css';
 
-const InnerTodo = document.querySelector(".todo-inner-content");
+const InnerTodo = document.querySelector('.todo-inner-content');
 
 const ToDo = [
   {
-    description: "Learn webpack",
+    description: 'Learn webpack',
     tasksCompleted: false,
     index: 0,
   },
   {
-    description: "DOM",
+    description: 'DOM',
     tasksCompleted: false,
     index: 1,
   },
   {
-    description: "Learn javscript",
+    description: 'Learn javscript',
     tasksCompleted: false,
     index: 2,
   },
   {
-    description: "Learn HTML",
+    description: 'Learn HTML',
     tasksCompleted: false,
     index: 3,
   },
 ];
 
-let display = " ";
+let display = ' ';
 const populateHtml = (item) => {
   item.forEach((elem) => {
     display += `
