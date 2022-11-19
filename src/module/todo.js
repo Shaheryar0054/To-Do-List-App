@@ -4,7 +4,6 @@ let isEdit = false;
 let editId = null;
 
 export default class display {
-  
   // Display list items
   static getTodoList = () => {
     let Todo;
@@ -16,7 +15,7 @@ export default class display {
     return Todo;
   };
 
-// function to delete todo
+  // function to delete todo
   static addDeleteEvent = () => {
     const trash = document.querySelectorAll(".trash");
     trash.forEach((task, i) => {
@@ -27,7 +26,7 @@ export default class display {
     });
   };
 
-// function to delete todo list
+  // function to delete todo list
   static deleteTodo = (id) => {
     const toDos = display.getTodoList();
     toDos.splice(id, 1);
@@ -40,7 +39,7 @@ export default class display {
     this.populateTodo(toDos);
   };
 
-// Function to display html content
+  // Function to display html content
   static populateTodo = (item) => {
     let display = " ";
     item.forEach((e, i) => {
@@ -68,7 +67,7 @@ export default class display {
     this.editTodoListEvent();
   };
 
-//  Adding todo list
+  //  Adding todo list
   static addTodoList = () => {
     const text = document.querySelector(".type-task").value;
     if (text !== "") {
@@ -93,7 +92,7 @@ export default class display {
     }
   };
 
-// Function to edite todolist
+  // Function to edite todolist
   static editTodoList = (id) => {
     const toDos = display.getTodoList();
     const findTodo = toDos.find((item, index) => index === id);
